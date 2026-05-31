@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="ConsoleApp1/HttpServerTest.csproj" />
+  <Project Path="FileTest/FileTest.csproj" />
   <Project Path="HttpClientTest/HttpClientTest.csproj" />
   <Project Path="JsonTest/JsonTest.csproj" />
+  <Project Path="JsonTest2/JsonTest2.csproj" />
 </Solution>
