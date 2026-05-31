@@ -1,5 +1,7 @@
 <Solution>
-  <Project Path="ConsoleApp1/HttpServerTest.csproj" />
-  <Project Path="HttpClientTest/HttpClientTest.csproj" />
-  <Project Path="JsonTest/JsonTest.csproj" />
+  <Project Path="ConsoleApp1/HttpServerTest.csproj" Id="4de46b91-7dfe-4b20-b152-6ce5238f2494" />
+  <Project Path="FileTest/FileTest.csproj" Id="58f0bdb8-bd84-4aba-aa61-7964ff0ce669" />
+  <Project Path="HttpClientTest/HttpClientTest.csproj" Id="38b8d7b0-cff2-4d5f-b376-bbf9aae007b4" />
+  <Project Path="JsonTest/JsonTest.csproj" Id="61ae0872-2861-4d22-b012-29d1752b1ca4" />
+  <Project Path="JsonTest2/JsonTest2.csproj" Id="95feaad7-5808-497d-8621-3bdff3f84b99" />
 </Solution>

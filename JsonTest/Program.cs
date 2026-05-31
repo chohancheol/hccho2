@@ -64,6 +64,17 @@ namespace JsonTest
             }
 
             Console.WriteLine("\n===============================");
+
+            string rawJson2 = "[\"AAA\", \"BBB\", {\"id\":\"cccc\", \"name\":\"dddd\"}]";
+
+            JArray jsonArray2 = JArray.Parse(rawJson2);
+            string id1= jsonArray2[0].ToString();
+            string id2= jsonArray2[1].ToString();
+
+            UserInfo userinfo = jsonArray2[2].ToObject<UserInfo>();
+
+            Console.WriteLine($"id1: {id1}");
+            Console.ReadLine();
         }
 
 
