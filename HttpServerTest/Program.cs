@@ -86,6 +86,25 @@ namespace httpServerTest
 
             // 스트림을 닫아 응답 전송 완료하기
             response.Close();
+
+
+            /*
+            // 4. 응답할 데이터 객체 생성
+            ServerResponseDto responseData = new ServerResponseDto
+            {
+                Status = "Success",
+                Message = "HttpListener로부터 보낸 JSON 응답입니다.",
+                ServerTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+                ErrorCode = 0
+            };
+
+            // 5. Newtonsoft.Json을 사용하여 객체를 JSON 문자열로 직렬화
+            string jsonString = JsonConvert.SerializeObject(responseData, Formatting.Indented);
+
+            // 6. 바이트 배열로 변환 후 스트림 전송
+            byte[] buffer = Encoding.UTF8.GetBytes(jsonString);
+            response.ContentLength64 = buffer.Length;
+            */
         }
     }
 }

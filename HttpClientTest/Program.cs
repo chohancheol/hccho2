@@ -32,6 +32,7 @@ namespace HttpClientTest
             await TestGetRequestAsync($"{baseUrl}/invalid-path");
 
             Console.WriteLine("\n=== 테스트 종료 ===");
+            Console.ReadLine();
         }
 
         /// <summary>
