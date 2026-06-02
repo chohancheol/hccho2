@@ -105,6 +105,42 @@ namespace httpServerTest
             byte[] buffer = Encoding.UTF8.GetBytes(jsonString);
             response.ContentLength64 = buffer.Length;
             */
+
+
+            /*
+            // 1. async가 없는 전통적인 void Main 메서드 사용
+            static void Main(string[] args)
+            {
+                Console.WriteLine("=== HttpListener 전통적 void Main 실행 ===");
+            
+                // 비동기 서버 구동 메서드를 호출하고, 완료될 때까지 메인 스레드를 대기시킵니다.
+                // (서버 루프가 무한히 돌기 때문에 사실상 메인 스레드가 여기서 멈춰 대기합니다.)
+                StartServerAsync().GetAwaiter().GetResult();
+            }
+
+            // 2. 실제 서버 구동을 담당하는 비동기 메서드
+            static async Task StartServerAsync()
+            {
+                HttpListener listener = new HttpListener();
+                listener.Prefixes.Add("http://localhost:8080/");
+            
+                Console.WriteLine("서버를 시작합니다... (http://localhost:8080/)");
+                listener.Start();
+
+                while (true)
+                {
+                    try
+                    {
+                        HttpListenerContext context = await listener.GetContextAsync();
+                        _ = Task.Run(() => HandleRequestAsync(context));
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"오류 발생: {ex.Message}");
+                    }
+                }
+            }
+             */
         }
     }
 }
